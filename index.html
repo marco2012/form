@@ -265,22 +265,41 @@
             </div>
           </div>
 
-          <div class="mb-4" id="car_yes_div" style="visibility: hidden">
-            <label
-              class="block text-gray-800 text-md font-normal mb-2"
-              for="amount_of_expenses"
-            >
-              Contract
-            </label>
-            <a target="_blank" href="/form/car"
-              >Click here to accept contract</a
-            >
+          <div class="block mb-4" id="car_yes_div" style="visibility: hidden">
+            <span class="text-gray-800">Own car request</span>
+            <div class="mt-2">
+              <div>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    class="form-radio text-indigo-600 h-4 w-4"
+                    name="radio-car-request"
+                    id="car_accept"
+                    value="1"
+                  />
+                  <span class="ml-2">Accept</span>
+                </label>
+              </div>
+              <div>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    class="form-radio text-green-500 h-4 w-4"
+                    name="radio-car-request"
+                    id="car_reject"
+                    value="2"
+                  />
+                  <span class="ml-2">Reject</span>
+                </label>
+              </div>
+            </div>
           </div>
 
           <div class="flex items-center pt-2">
             <button
               class="px-4 py-2 rounded text-white inline-block shadow-lg bg-blue-500 hover:bg-blue-600 focus:bg-blue-700"
               id="submit"
+              type="submit"
             >
               Submit
             </button>
@@ -298,6 +317,10 @@
       });
       $("#car_no").click(function () {
         $("#car_yes_div").css("visibility", "hidden");
+      });
+      $("#submit").click(function (e) {
+        e.preventDefault();
+        alert("Done!");
       });
     </script>
   </body>
