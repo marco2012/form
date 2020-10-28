@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body style="background-color: #f0ebf8">
+    <!-- component -->
+    <div class="flex items-center justify-center pt-8">
+      <div class="w-full max-w-md">
+        <form class="bg-white shadow-lg rounded px-12 pt-6 pb-8 mb-4">
+          <!-- @csrf -->
+          <div
+            class="text-gray-800 text-2xl flex justify-center border-b-2 py-2 mb-4"
+          >
+            Car
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="full_name"
+            >
+              Full Name
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="full_name"
+              id="full_name"
+              type="text"
+              placeholder="Full Name"
+            />
+          </div>
+
+          <div class="block mb-4">
+            <span class="text-gray-800">Car</span>
+            <div class="mt-2">
+              <div>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    class="form-radio text-indigo-600 h-4 w-4"
+                    name="radio-car"
+                    id="car_accept"
+                    value="1"
+                  />
+                  <span class="ml-2">Accept</span>
+                </label>
+              </div>
+              <div>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    class="form-radio text-green-500 h-4 w-4"
+                    name="radio-car"
+                    id="car_reject"
+                    value="2"
+                  />
+                  <span class="ml-2">Reject</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center pt-2">
+            <button
+              class="px-4 py-2 rounded text-white inline-block shadow-lg bg-blue-500 hover:bg-blue-600 focus:bg-blue-700"
+              id="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+        <p class="text-center text-gray-600 text-xs pb-4">
+          &copy;2020 DIAG - Sapienza University of Rome.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,1 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body style="background-color: #ead5d7">
+    <!-- component -->
+    <div class="flex items-center justify-center pt-8">
+      <div class="w-full max-w-md">
+        <form class="bg-white shadow-lg rounded px-12 pt-6 pb-8 mb-4">
+          <!-- @csrf -->
+          <div
+            class="text-gray-800 text-2xl flex justify-center border-b-2 py-2 mb-4"
+          >
+            Travel Authorization Request Procedure
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="full_name"
+            >
+              Full Name
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="full_name"
+              id="full_name"
+              type="text"
+              placeholder="Full Name"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="position"
+            >
+              Position
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="position"
+              id="position"
+              type="text"
+              placeholder="Position"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="email"
+              id="email"
+              v-model="form.email"
+              type="email"
+              placeholder="Email"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="tax_code"
+            >
+              Tax code
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="tax_code"
+              id="tax_code"
+              type="text"
+              placeholder="Tax code"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="in_service_at"
+            >
+              In service at
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="in_service_at"
+              id="in_service_at"
+              type="text"
+              placeholder="In service at"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="starting_date"
+            >
+              Starting date
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="starting_date"
+              id="starting_date"
+              type="text"
+              placeholder="Starting date"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="ending_date"
+            >
+              Ending date
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="ending_date"
+              id="ending_date"
+              type="text"
+              placeholder="Ending date"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="ending_time"
+            >
+              Ending time
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="ending_time"
+              id="ending_time"
+              type="text"
+              placeholder="Ending time"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="destination"
+            >
+              Destination
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="destination"
+              id="destination"
+              type="text"
+              placeholder="Destination"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="means_of_transportation"
+            >
+              Means of transportation
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="means_of_transportation"
+              id="means_of_transportation"
+              type="text"
+              placeholder="Means of transportation"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="purpose"
+            >
+              Purpose
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="purpose"
+              id="purpose"
+              type="text"
+              placeholder="Purpose"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="anticipation_expenses"
+            >
+              Anticipation of expenses already incurred (75%)
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="anticipation_expenses"
+              id="anticipation_expenses"
+              type="text"
+              placeholder="Anticipation of expenses"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="amount_of_expenses"
+            >
+              Amount of expenses
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              name="amount_of_expenses"
+              id="amount_of_expenses"
+              type="text"
+              placeholder="Amount of expenses"
+            />
+          </div>
+
+          <div class="block mb-4">
+            <span class="text-gray-800">Car</span>
+            <div class="mt-2">
+              <div>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    class="form-radio text-indigo-600 h-4 w-4"
+                    name="radio-car"
+                    id="car_yes"
+                    value="1"
+                  />
+                  <span class="ml-2">Yes</span>
+                </label>
+              </div>
+              <div>
+                <label class="inline-flex items-center">
+                  <input
+                    type="radio"
+                    class="form-radio text-green-500 h-4 w-4"
+                    name="radio-car"
+                    id="car_no"
+                    value="2"
+                  />
+                  <span class="ml-2">No</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-4" id="car_yes_div" style="visibility: hidden">
+            <label
+              class="block text-gray-800 text-md font-normal mb-2"
+              for="amount_of_expenses"
+            >
+              Contract
+            </label>
+            <a target="_blank" href="/car.html"
+              >Click here to accept contract</a
+            >
+          </div>
+
+          <div class="flex items-center pt-2">
+            <button
+              class="px-4 py-2 rounded text-white inline-block shadow-lg bg-blue-500 hover:bg-blue-600 focus:bg-blue-700"
+              id="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+        <p class="text-center text-gray-600 text-xs pb-4">
+          &copy;2020 DIAG - Sapienza University of Rome.
+        </p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $("#car_yes").click(function () {
+        $("#car_yes_div").css("visibility", "visible");
+      });
+      $("#car_no").click(function () {
+        $("#car_yes_div").css("visibility", "hidden");
+      });
+    </script>
+  </body>
+</html>
