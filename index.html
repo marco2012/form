@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
 
-    <title>Sapienza</title>
+    <title>DIAG - Sapienza</title>
   </head>
   <body style="background-color: #782b35">
     <!-- component -->
@@ -21,8 +21,11 @@
       <div class="w-full max-w-md">
         <form class="bg-white shadow-lg rounded px-12 pt-6 pb-8 mb-4">
           <!-- @csrf -->
+          <div class="flex justify-center">
+            <img src="sapienza.jpg" alt="logo_sapienza" width="60%" />
+          </div>
           <div
-            class="text-gray-800 text-2xl flex justify-center border-b-2 py-2 mb-4"
+            class="flex justify-center text-gray-800 text-2xl border-b-2 py-2 mb-4"
           >
             Travel Authorization Request Procedure
           </div>
@@ -295,7 +298,7 @@
             </div>
           </div>
 
-          <div class="flex items-center pt-2">
+          <div class="flex items-center justify-center pt-2">
             <button
               class="px-4 py-2 rounded text-white inline-block shadow-lg bg-blue-500 hover:bg-blue-600 focus:bg-blue-700"
               id="submit"
@@ -306,12 +309,15 @@
           </div>
         </form>
         <p class="text-center text-gray-200 text-xs pb-4">
-          &copy;2020 DIAG - Sapienza University of Rome.
+          &copy;
+          <span id="copyright_date"></span>
+          DIAG - Sapienza University of Rome.
         </p>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+      $("#copyright_date").text(new Date().getFullYear());
       $("#car_yes").click(function () {
         $("#car_yes_div").css("visibility", "visible");
       });
@@ -320,7 +326,7 @@
       });
       $("#submit").click(function (e) {
         e.preventDefault();
-        alert("Done!");
+        alert("Thank you for your submission!");
       });
     </script>
   </body>
